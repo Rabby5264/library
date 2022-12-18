@@ -15,7 +15,7 @@ if($result){
     echo "Data insert successful!";
 }
 else{
-    echo "Data insert Fail!";
+    echo "Data doesnt insert";
 }
 
 ?>
