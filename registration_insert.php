@@ -12,7 +12,8 @@ $sql = "INSERT INTO users(firstname,lastname,email,password,mobile) VALUES ('$fi
 $result = $db->query($sql);
 
 if($result){
-    echo "Data insert successful!";
+    header('Location:thankyou.php');
+    
 }
 else{
     echo "Data doesnt insert";
