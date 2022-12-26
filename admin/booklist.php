@@ -1,17 +1,59 @@
-<?php include 'header.php'; ?>
+<?php
+ include 'header.php'; 
+ include 'connection.php'; 
+ $sql="SELECT * FROM books";
+ $result=$db->query($sql);
 
 
-        <!-- Page Content  -->
-        <div id="content" class="p-4 p-md-5 pt-5">
-        <h2 class="mb-4">Sidebar #09</h2>
-        <h1>This is booklist</h1>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-		</div>
+?>
 
 
 
+<div class=container id="content">
+  <div class="position-absolute mt-3 mr-5 end-0">
+    <a href="addbook.php"><button class="btn btn-primary">ADD NEW BOOK</button></a>
+  </div>
+  <dib class="m-5">
+  <table class="table table-bordered mt-5">
+    <thead>
+      <tr class="text-center">
+          <th>name</th>
+          <th>categories</th>
+          <th>title</th>
+          <th>author</th>
+          <th>image</th>
+          <th>file</th>
+          <th>Published</th>
+          <th>action</th>
+        </tr>
+      </thead>
+    <?php while($row = $result->fetch_assoc()):   ?>
+    <tbody>
+      <tr>
+          <td><?php echo $row['name']; ?></td>
+          <td><?php echo $row['categories']; ?></td>
+          <td><?php echo $row['title']; ?></td>
+          <td><?php echo $row['author']; ?></td>
+          <td><?php echo $row['image']; ?></td>
+          <td><?php echo $row['file']; ?></td>
+          <td><?php echo $row['code']; ?></td>
+        <th>
+          <button class="btn btn-dark">
+            <a href="button/books_edit.php?id=<?php echo $row['id']; ?>">EDIT</a>
+          </button>
+          <button class="btn btn-danger text-dark">
+            <a href="button/books_delete.php?id=<?php echo $row['id']; ?>">Delete</a>
+          </button>
+        </th>
+        
+      </tr>
+    </tbody>
+    <?php endwhile;  ?>
+  </table>
+  </dib>
+</div>
 
-<?php include 'footer.php'; ?>
+
+
+
+<?php include 'footer.php'; ?> 

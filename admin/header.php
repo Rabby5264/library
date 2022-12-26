@@ -1,15 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Sidebar 09</title>
+  	<title>ADMIN PENEL</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formstyle.css">
   </head>
   <body>
 		
@@ -27,7 +26,7 @@
 	  		</div>
         <ul class="list-unstyled components mb-5">
           <li class="active">
-            <a href="index.php"><span class="fa fa-home mr-3"></span>DESHBOARD</a>
+            <a href="deshboard.php"><span class="fa fa-home mr-3"></span>DESHBOARD</a>
           </li>
           <li>
             <a href="booklist.php"><span class="fa fa-gift mr-3"></span> BOOK_LIST</a>
@@ -39,10 +38,13 @@
             <a href="admin.php"><span class="fa fa-trophy mr-3"></span>ADMIN</a>
           </li>
           <li>
+            <a href="registration.php"><span class="fa fa-trophy mr-3"></span>REGISTRATION</a>
+          </li>
+          <li>
             <a href="option.php"><span class="fa fa-support mr-3"></span>OPTIONS </a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+            <a href="signout.php"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
           </li>
         </ul>
 

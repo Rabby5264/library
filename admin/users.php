@@ -32,10 +32,10 @@
         <th><?php echo $row['mobile'];  ?></th>
         <th>
           <button class="btn btn-dark">
-            <a href="user_block.php?id=<?php echo $row['id']; ?>">Block</a>
+            <a href="button/user_block.php?id=<?php echo $row['id']; ?>">Block</a>
           </button>
           <button class="btn btn-danger text-dark">
-            <a href="user_delete.php?id=<?php echo $row['id']; ?>">Delete</a>
+            <a href="button/user_delete.php?id=<?php echo $row['id']; ?>">Delete</a>
           </button>
         </th>
         
